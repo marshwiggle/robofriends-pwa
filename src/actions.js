@@ -12,7 +12,7 @@ export const setSearchField = (text) => ({
 
 
 // We need redux-thunk middleware to process the following code
-export conts requestRobots = () => (dispatch) => {
+export const requestRobots = () => (dispatch) => {
      dispatch({ type: REQUEST_ROBOTS_PENDING }); // No Payload
      fetch('https://jsonplaceholder.typicode.com/users')
        .then(response => response.json())

@@ -10,7 +10,7 @@ class CounterButton extends Component {
 
    
      shouldComponentUpdate(nextProps, nextState){
-          if (this.sate.count !== nextState.count){
+          if (this.state.count !== nextState.count){
                return true
           }
           return false;
@@ -25,11 +25,11 @@ class CounterButton extends Component {
      render(){
            console.log('Header');      
            return (
-               <button color={this.props.color} onClick={updateCount}>
+               <button color={this.props.color} onClick={this.updateCount}>
                     Count: {this.state.count} 
                </button>
            );
      }
 }
 
-export default Header;
+export default CounterButton;

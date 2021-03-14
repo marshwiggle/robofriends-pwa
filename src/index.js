@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { crateLogger } from 'redux-logger';
-import thunkMiddleware form 'redux-thunk';
+import { createLogger } from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
 import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
@@ -12,12 +12,12 @@ import 'tachyons';
 
 const logger = createLogger();
 
-const = rootReducer = combineReducers({ searchRobots, requestRobots})
+const  rootReducer = combineReducers({ searchRobots, requestRobots})
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 
 ReactDOM.render(
   <React.StrictMode>
-     <Provider store = { store }> // To pass down the store to other components
+     <Provider store = { store }> 
           <App />
      </Provider>
   </React.StrictMode>,
